@@ -241,13 +241,13 @@ print(result_df)
 Last_model = DifferentLossScoresHybridRecommender(URM_train,recommender_object, prova_ease)
 Last_model.fit(alpha=0.27985586193900014, norm= -np.inf)
 print("first Hybrid Done")
-print(Last_model.W_sparse)
+
 
 from Recommenders.KNN.ItemKNN_CFCBF_Hybrid_Recommender import ItemKNN_CFCBF_Hybrid_Recommender
 candidate_generator_recommender= DifferentLossScoresHybridRecommender(URM_train,Last_model,Slim_Elasticnet)
 candidate_generator_recommender.fit(alpha= 0.2796027263555756, norm= 2)
 print("second Hybrid Done")
-print(candidate_generator_recommender.W_sparse)
+
 ############################################## XGBOOST ########################################################
 import pandas as pd
 from tqdm import tqdm
